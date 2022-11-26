@@ -41,21 +41,46 @@
     <main>
         <!--____________________ navigation bar ____________________-->
         <nav class="nav__bar">
-            <div class="nav__link nav__link-active">
-                <a href="#home"     class="nav__name">home</a>
+            <div class="nav__link flex__center-all nav__link-active">
+                <a href="#home"     class="nav__name">nuwenosm</a>
             </div>
-            <div class="nav__link">
-                <a href="#about"    class="nav__name">about</a>
+            <!-- <div class="nav__link flex__center-all">
+                <a href="#studio"   class="nav__name">Studio</a>
             </div>
-            <div class="nav__link">
-                <a href="#studio"   class="nav__name">studio</a>
+            <div class="nav__link flex__center-all">
+                <a href="#contact"  class="nav__name">Contact</a>
+            </div> -->
+            <div class="nav__toggle flex__center-all">
+                <ion-icon name="menu-outline" class="icon__menu"></ion-icon>
+                <ion-icon name="close-outline" class="icon__close"></ion-icon>
             </div>
-            <div class="nav__link">
-                <a href="#contact"  class="nav__name">contact</a>
+
+            <div class="nav__menu">
+                <div class="nav__menu-img">
+                    <img 
+                        src="https://images.pexels.com/photos/8602141/pexels-photo-8602141.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" 
+                        alt=""
+                    />
+                </div>
+                <div class="nav__menu-container">
+                    <div class="nav__menu-link">
+                        <a href="#home"     class="nav__menu-name">Home</a>
+                    </div>
+                    <div class="nav__menu-link">
+                        <a href="#studio"   class="nav__menu-name">Studio</a>
+                    </div>
+                    <div class="nav__menu-link">
+                        <a href="#contact"  class="nav__menu-name">Contact</a>
+                    </div>
+                </div>  
             </div>
         </nav>
     </main>
 
+    <!--____________________ ionic framework ____________________-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
     <!--____________________ app javascript ____________________-->
     <script src="app.js"></script>
 </body>
