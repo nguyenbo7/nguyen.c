@@ -79,10 +79,12 @@ html {
 body {
   font-size: var(--fs-text-s);
   font-family: var(--font-main);
-  letter-spacing: 1px;
 
   color: var(--clr-dark);
   background-color: var(--clr-light);
+
+  letter-spacing: 1px;
+  line-height: 1.875;
 }
 ul {
   list-style: none;
@@ -110,7 +112,17 @@ main {
     2.  components
 ------------------------------------------------
 ----------------------------------------------*/
-
+.section__container {
+  margin-top: 40px;
+  height: calc(100vh - 40px - 80px);
+  width: 80%;
+}
+.tab_2 {
+  padding-left: 20px;
+}
+.tab_4 {
+  padding-left: 40px;
+}
 /*----------------------------------------------
 ------------------------------------------------
     3.  navigation bar
@@ -151,7 +163,7 @@ ion-icon {
   font-size: 32px;
 }
 ion-icon {
-  --ionicon-stroke-width: 16px;
+  --ionicon-stroke-width: 24px;
 }
 .icon__close {
   display: none;
@@ -198,6 +210,26 @@ ion-icon {
     4.  home section
 ------------------------------------------------
 ----------------------------------------------*/
+.home__info {
+  border-top: 2px solid var(--clr-dark);
+  margin-bottom: var(--mb-container);
+}
+.about__header {
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.about__label {
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+  width: 100px;
+}
+.icon__arrow-up {
+  display: none;
+}
+.about__bigText {
+  font-size: var(--fs-hugetext-s);
+}
 
 /*----------------------------------------------
 ------------------------------------------------

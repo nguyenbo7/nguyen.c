@@ -1,3 +1,5 @@
+//  navigation bar toggle
+//  --------------------------------------------------------------
 const menu      = document.querySelector(".nav__menu");
 const menuLinks = document.querySelectorAll(".nav__menu-link");
 const hamburger = document.querySelector(".nav__toggle");
@@ -23,3 +25,6 @@ menuLinks.forEach(
       menuEachLink.addEventListener("click", toggleMenu);
     }
 )
+
+//  label info toggle
+//  --------------------------------------------------------------
