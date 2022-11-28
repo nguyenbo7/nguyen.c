@@ -114,14 +114,10 @@ main {
 ----------------------------------------------*/
 .section__container {
   margin-top: 40px;
-  height: calc(100vh - 40px - 80px);
-  width: 80%;
+  width: 360px;
 }
-.tab_2 {
-  padding-left: 20px;
-}
-.tab_4 {
-  padding-left: 40px;
+i {
+  font-size: 24px;
 }
 /*----------------------------------------------
 ------------------------------------------------
@@ -133,7 +129,7 @@ main {
   z-index: var(--z-high);
   bottom: 20px;
 
-  width: 80%;
+  width: 360px;
   height: 38px;
   border-top: 2px solid var(--clr-dark);
 
@@ -159,13 +155,7 @@ main {
 .nav__toggle {
   cursor: pointer;
 }
-ion-icon {
-  font-size: 32px;
-}
-ion-icon {
-  --ionicon-stroke-width: 24px;
-}
-.icon__close {
+.icon__nav-close {
   display: none;
 }
 .nav__menu {
@@ -175,8 +165,8 @@ ion-icon {
   bottom: 80px;
   transform: translateY(-150%);
 
-  width: 80%;
-  padding: 2%;
+  width: 360px;
+  padding: 5px;
   background-color: var(--clr-dark);
   transition: transform 0.45s;
 }
@@ -212,23 +202,45 @@ ion-icon {
 ----------------------------------------------*/
 .home__info {
   border-top: 2px solid var(--clr-dark);
-  margin-bottom: var(--mb-container);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
 }
-.about__header {
+.info__header {
   height: 32px;
   display: flex;
   justify-content: space-between;
 }
-.about__label {
+.info__label {
   color: var(--clr-light);
   background-color: var(--clr-dark);
   width: 100px;
 }
-.icon__arrow-up {
+.info__toggle {
+  cursor: pointer;
+}
+.icon__info-close {
   display: none;
 }
-.about__bigText {
+
+.info__body {
+  height: 0;
+  width: 320px;
+  margin-left: 10px;
+  transition: 0.4s ease;
+}
+.home__info-show .info__body {
+  height: 350px;
+}
+
+.info__bigText {
   font-size: var(--fs-hugetext-s);
+}
+.about_special-info {
+  display: flex;
+}
+.tab_space {
+  width: 104px;
+  margin: 2px 20px 2px 40px;
 }
 
 /*----------------------------------------------

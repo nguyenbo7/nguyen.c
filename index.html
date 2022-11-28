@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>nguyen portfolio</title>
 </head>
 
@@ -51,8 +52,8 @@
                 <a href="#contact"  class="nav__name">Contact</a>
             </div> -->
             <div class="nav__toggle flex__center-all">
-                <ion-icon name="menu-outline"  class="icon__menu"></ion-icon>
-                <ion-icon name="close-outline" class="icon__close"></ion-icon>
+                <i class="uil uil-bars  icon__nav-menu"></i>
+                <i class="uil uil-multiply  icon__nav-close"></i>
             </div>
 
             <div class="nav__menu">
@@ -81,73 +82,94 @@
             home section {
                 home__about,
                 home__experience,
-                home__job-position;
+                home__position;
                 home__connect;
             }
             --------------------------------------------------------
         -->
         <section    class="home__section    section__container">
-            <div class="home__about     home__info">
-                <div class="about__header">
-                    <div class="about__icon-arrow">
-                        <ion-icon name="add-outline" class="icon__arrow-down"></ion-icon>
-                        <ion-icon name="close-outline" class="icon__arrow-up"></ion-icon>
-                    </div>
-                    <div class="about__label flex__center-all">About me</div>
+            <div class="home__about home__info home__info-show">
+                <div class="info__header">
+                    <i class="uil uil-times     icon__info"></i>
+                    <div class="info__label flex__center-all">About me</div>
                 </div>
-                <div class="about__bigText">Hello</div>
-                <div class="about__text">
-                    <span>
-                        My name is Nguyen Chau, co-founder of nuwenosm studio.
-                        I'm currently a Full-Stack Developer,
-                        who is also passionate about Graphic and 3D Desgin.
-                    </span>
-                    <br /><br />
-                    <div>
-                        <!--Must fix the tab by using JavaScript-->
-                        function speacial_infomation() <br />
-                        {
-                        <br />
-                        <span class="tab_4"></span> personality :
-                        <span class="tab_2"></span> "ENFJ-T"; <br />
-
-                        <span class="tab_4"></span> zodiac_sign:
-                        <span class="tab_2"></span> "Pisces"; <br />
-
-                        <span class="tab_4"></span> fav_quote:
-                        <span class="tab_2"></span> "Dream to experience"; <br />
-                        }
+                <div class="info__body">
+                    <div class="info__bigText">Hello</div>
+                    <div class="info__text">
+                        <span>
+                            My name is Nguyen Chau, co-founder of nuwenosm studio.
+                            I'm currently a Full-Stack Developer,
+                            who is also passionate about Graphic and 3D Desgin.
+                        </span><br /><br />
+                        <div>
+                            function speacial_infomation() <br />
+                            {
+                                <div class="about_special-info">
+                                    <div class="tab_space">personality :</div>" ENFJ-T " ;
+                                </div>
+                                <div class="about_special-info">
+                                    <div class="tab_space">zodiac_sign :</div>" Pisces " ;
+                                </div>
+                                <div class="about_special-info">
+                                    <div class="tab_space">myfav_word :</div>" Dream " ;
+                                </div> 
+                            }
+                        </div>
+                        
                     </div>
-                    
                 </div>
             </div>
 
-            <div class="home__experience     home__info">
-                <div class="about__header">
-                    <div class="about__icon-arrow">
-                        <ion-icon name="add-outline" class="icon__arrow-down"></ion-icon>
-                        <ion-icon name="close-outline" class="icon__arrow-up"></ion-icon>
+            <div class="home__experience home__info">
+                <div class="info__header">
+                    <i class="uil uil-plus     icon__info"></i>
+                    <div class="info__label flex__center-all">Years Exp</div>
+                </div>
+                <div class="info__body">
+                    <div class="info__bigText">03+</div>
+                    <div class="info__text">
+                        <span>
+                            Nguyen has worked on both Front & Back-end 
+                            through online and school courses for the past few years. 
+                            Also, develop his skills by learning from 
+                            and assisting others working on real-world application.
+                            <br><br>
+                            Follow me on @Instagram for more works.
+                        </span>
+                        
                     </div>
-                    <div class="about__label flex__center-all">Experience</div>
-                </div>  
+                </div>
             </div>
 
-            <div class="home__experience     home__info">
-                <div class="about__header">
-                    <div class="about__icon-arrow">
-                        <ion-icon name="add-outline" class="icon__arrow-down"></ion-icon>
-                        <ion-icon name="close-outline" class="icon__arrow-up"></ion-icon>
+            <div class="home__position home__info">
+                <div class="info__header">
+                    <i class="uil uil-plus     icon__info"></i>
+                    <div class="info__label flex__center-all">Position</div>
+                </div>
+                <div class="info__body">
+                    <div class="info__bigText">03+</div>
+                    <div class="info__text">
+                        <span>
+                            UX/UI Designer <br>
+                            #Figma #Wireframing #Prototyping <br><br>
+
+                            Front-end <br>
+                            #Html #Css #JavaScript #React <br><br>
+
+                            Back-end <br>
+                            #PHP #MySQL #JQuery #Express <br><br>
+
+                            Graphic Design <br>
+                            #Illustrator #PhotoShop #Blender
+                        </span>
                     </div>
-                    <div class="about__label flex__center-all">Position</div>
-                </div>  
+                </div>
             </div>
+            
+
 
         </section>
     </main>
-
-    <!--____________________ ionic framework ____________________-->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!--____________________ app javascript ____________________-->
     <script src="app.js"></script>
