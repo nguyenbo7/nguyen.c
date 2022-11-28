@@ -23,7 +23,7 @@ style guide
 *************************************************
 ************************************************/
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap");
 
 /*----------------------------------------------
@@ -44,7 +44,7 @@ style guide
 
   /* font-size */
   --fs-text-xs: 0.625rem;
-  --fs-text-s: 0.812rem;
+  --fs-text-s: 0.8rem;
   --fs-text-m: 1rem;
   --fs-text-l: 1.25rem;
   --fs-text-xl: 1.562rem;
@@ -78,6 +78,7 @@ html {
 }
 body {
   font-size: var(--fs-text-s);
+  font-weight: 400;
   font-family: var(--font-main);
 
   color: var(--clr-dark);
@@ -119,6 +120,25 @@ main {
 i {
   font-size: 24px;
 }
+.label__header {
+  border-top: 2px solid var(--clr-dark);
+  width: 100%;
+  height: 32px;
+  margin-bottom: 10px;
+}
+.label__header-text {
+  width: 100px;
+  height: 100%;
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.label__body-bigText {
+  font-size: var(--fs-hugetext-s);
+}
 /*----------------------------------------------
 ------------------------------------------------
     3.  navigation bar
@@ -127,11 +147,13 @@ i {
 .nav__bar {
   position: fixed;
   z-index: var(--z-high);
-  bottom: 20px;
+  bottom: 0;
+  padding-bottom: 20px;
 
   width: 360px;
-  height: 38px;
+  height: 58px;
   border-top: 2px solid var(--clr-dark);
+  background-color: var(--clr-light);
 
   display: flex;
   align-items: center;
@@ -151,7 +173,7 @@ i {
   color: var(--clr-light);
 }
 
-/*Hamburger menu*/
+/*----- Hamburger menu -----*/
 .nav__toggle {
   cursor: pointer;
 }
@@ -200,40 +222,29 @@ i {
     4.  home section
 ------------------------------------------------
 ----------------------------------------------*/
+.home__section {
+  margin-bottom: 4rem;
+}
+
+/*----- home info section 1 -----*/
 .home__info {
-  border-top: 2px solid var(--clr-dark);
   margin-bottom: 1.5rem;
   overflow: hidden;
 }
-.info__header {
-  height: 32px;
+.home__info .label__header {
   display: flex;
   justify-content: space-between;
-}
-.info__label {
-  color: var(--clr-light);
-  background-color: var(--clr-dark);
-  width: 100px;
-}
-.info__toggle {
+  margin-bottom: 0px;
   cursor: pointer;
 }
-.icon__info-close {
-  display: none;
-}
-
 .info__body {
   height: 0;
   width: 320px;
-  margin-left: 10px;
+  margin-left: 16px;
   transition: 0.4s ease;
 }
 .home__info-show .info__body {
   height: 350px;
-}
-
-.info__bigText {
-  font-size: var(--fs-hugetext-s);
 }
 .about_special-info {
   display: flex;
@@ -243,6 +254,37 @@ i {
   margin: 2px 20px 2px 40px;
 }
 
+/*----- home info section 2 -----*/
+.connect__body {
+  width: 100%;
+  height: 240px;
+  margin-top: 20px;
+  border: 2px solid var(--clr-dark);
+  border-top: 24px solid var(--clr-dark);
+}
+.connect__img-container {
+  width: 70%;
+  height: 160px;
+
+  border: 1px solid var(--clr-dark);
+  margin-right: 16px;
+}
+.connect__socialmedia-container {
+  width: 40px;
+  height: 160px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.socialmedia__link {
+  width: 100%;
+  height: 40px;
+}
+.socialmedia__text {
+  display: none;
+}
 /*----------------------------------------------
 ------------------------------------------------
     5.  about section
