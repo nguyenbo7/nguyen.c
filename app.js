@@ -31,17 +31,19 @@ menuLinks.forEach(
 const accordions = document.querySelectorAll(".home__info");
 
 accordions.forEach((item, index) => {
-    let accor_header = item.querySelector(".info__header");
+    let accor_header = item.querySelector(".icon__info");
 
     accor_header.addEventListener("click", () => {
         item.classList.toggle("home__info-show");
 
         if(item.classList.contains("home__info-show"))
         {
-            item.querySelector(".icon__info").classList.replace("uil-plus", "uil-times");
+            // item.querySelector(".icon__info").classList.replace("uil-plus", "uil-times");
+            accor_header.classList.replace("uil-plus", "uil-times");
         }
         else{
-            item.querySelector(".icon__info").classList.replace("uil-times", "uil-plus");
+            // item.querySelector(".icon__info").classList.replace("uil-times", "uil-plus");
+            accor_header.classList.replace("uil-times", "uil-plus");
         }
         removeOpen(index);
     })
