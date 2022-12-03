@@ -289,6 +289,9 @@ i {
 .socialmedia__text {
   display: none;
 }
+.home__hugeimg-container {
+  display: none;
+}
 /*----------------------------------------------
 ------------------------------------------------
     5.  about section
@@ -312,32 +315,30 @@ i {
     8.  responsive styles
 ------------------------------------------------
 ----------------------------------------------*/
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 880px) {
   /*----- home section -----*/
   .home__section {
     width: 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
     grid-template-areas:
       "about experience"
       "connect position";
-    justify-items: flex-end;
-    margin: 40px 30px;
+    margin: 40px;
     gap: 40px 0;
   }
   .home__about {
     grid-area: about;
-    justify-self: flex-start;
   }
   .home__experience {
     grid-area: experience;
+    justify-self: flex-end;
   }
   .home__position {
     grid-area: position;
+    justify-self: flex-end;
   }
   .home__connect {
     grid-area: connect;
-    justify-self: flex-start;
   }
   .info__body {
     height: 350px;
@@ -345,7 +346,51 @@ i {
   .icon__info {
     display: none;
   }
-  .nav__bar {
-    left: 30px;
+  /* .nav__bar {
+    left: 40px;
+  } */
+}
+
+@media screen and (min-width: 1150px) {
+  /*----- home section -----*/
+  .home__section {
+    grid-template-areas:
+      "about    hugeimg     experience"
+      "connect  hugeimg     position";
+  }
+  .home__hugeimg-container {
+    grid-area: hugeimg;
+    display: block;
+    height: 820px;
+    width: 80%;
+    justify-self: center;
+
+    padding: 2px;
+    background-color: var(--clr-dark);
+    transition: transform 0.45s;
+
+    display: flex;
+    justify-content: center;
+  }
+  .home__hugeimg-container img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  /*----- home section -----*/
+  .home__section {
+    margin: 40px 60px;
+  }
+  .home__hugeimg-container {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  /*----- home section -----*/
+  .home__section {
+    margin: 40px 100px;
   }
 }
