@@ -101,7 +101,9 @@ main {
   width: 100%;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
 .flex__center-all {
   display: flex;
@@ -138,6 +140,11 @@ i {
 }
 .label__body-bigText {
   font-size: var(--fs-hugetext-s);
+}
+.coding_margin_bottom {
+  height: 80px;
+  width: 200px;
+  background-color: aquamarine;
 }
 /*----------------------------------------------
 ------------------------------------------------
@@ -273,6 +280,9 @@ i {
   border: 1px solid var(--clr-dark);
   margin-right: 16px;
 }
+.connect__img-container img {
+  filter: grayscale(1);
+}
 .connect__socialmedia-container {
   width: 40px;
   height: 160px;
@@ -294,9 +304,27 @@ i {
 }
 /*----------------------------------------------
 ------------------------------------------------
-    5.  about section
+    5.  studio section
 ------------------------------------------------
 ----------------------------------------------*/
+.studio__about {
+  height: calc(100vh - 40px - 80px);
+}
+.studio__about-body {
+  margin-top: 24px;
+}
+.service__container {
+  margin: 8px;
+
+  display: flex;
+  align-items: center;
+}
+.service__square {
+  width: 8px;
+  height: 8px;
+  background-color: var(--clr-dark);
+  margin-right: 16px;
+}
 
 /*----------------------------------------------
 ------------------------------------------------
