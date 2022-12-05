@@ -57,3 +57,4 @@ function removeOpen(index1) {
         }
     })
 }
+
