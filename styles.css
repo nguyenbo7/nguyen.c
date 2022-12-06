@@ -142,6 +142,9 @@ i {
 .label__body-bigText {
   font-size: var(--fs-hugetext-s);
 }
+.label__body-midText {
+  font-size: var(--fs-text-xl);
+}
 
 .list__item {
   padding: 0px 8px 14px 8px;
@@ -168,7 +171,7 @@ i {
 }
 .tab_space {
   width: 104px;
-  margin: 2px 20px 2px 40px;
+  margin: 2px 20px 2px 20px;
 }
 /*----------------------------------------------
 ------------------------------------------------
@@ -190,6 +193,11 @@ i {
   align-items: center;
   justify-content: space-between;
 }
+
+/**
+*   nav link
+*   --------------------
+*/
 .nav__link {
   padding: 0 10px;
   height: 100%;
@@ -204,7 +212,10 @@ i {
   color: var(--clr-light);
 }
 
-/*----- Hamburger menu -----*/
+/**
+*   nav toggle (menu icon)
+*   --------------------
+*/
 .nav__toggle {
   cursor: pointer;
 }
@@ -254,8 +265,6 @@ i {
     4.  home section
 ------------------------------------------------
 ----------------------------------------------*/
-
-/*----- home info section 1 -----*/
 .home__info {
   margin-bottom: 1.5rem;
   overflow: hidden;
@@ -269,7 +278,6 @@ i {
   height: 0;
   width: 300px;
   transition: 0.4s ease;
-  /* background-color: aquamarine; */
 }
 .home__info-show .info__body {
   height: 350px;
@@ -277,14 +285,19 @@ i {
 .info__header .icon__info {
   cursor: pointer;
 }
+
+/**
+*   home about
+*   --------------------
+*/
 .home__about .list__item {
   padding: 0px 0px 4px 0px;
 }
-.about_special-info {
-  display: flex;
-}
 
-/*----- home info section 2 -----*/
+/**
+*   home connect
+*   --------------------
+*/
 .home__connect .info__body {
   width: 100%;
   padding-top: 10px;
@@ -293,6 +306,7 @@ i {
   width: 100%;
   height: 240px;
   margin-top: 20px;
+
   border: 2px solid var(--clr-dark);
   border-top: 16px solid var(--clr-dark);
 }
@@ -306,6 +320,7 @@ i {
   filter: grayscale(1);
   object-fit: fill;
 }
+
 .connect__socialmedia-container {
   width: 40px;
   height: 160px;
@@ -322,6 +337,11 @@ i {
 .socialmedia__text {
   display: none;
 }
+
+/**
+*   home hugeimg
+*   --------------------
+*/
 .home__hugeimg-container {
   display: none;
 }
@@ -330,51 +350,160 @@ i {
     5.  studio section
 ------------------------------------------------
 ----------------------------------------------*/
+/**
+*   studio about
+*   --------------------
+*/
 .studio__about {
   margin-bottom: 2rem;
 }
+.studio__about-header {
+  border-top: 8px solid var(--clr-dark);
+}
 .studio__about-body {
   margin-top: 24px;
+}
+
+/**
+*   studio slides
+*   --------------------
+*/
+
+.slides__container {
+  font-family: sans-serif;
+  scroll-snap-type: x mandatory;
+  display: flex;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 .slide__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  min-width: 90%;
+  scroll-snap-align: start;
+  position: relative;
 }
+.slide__item .label__header {
+  width: 250px;
+}
+
 .slide__header {
   position: relative;
-  width: 120px;
+  width: 100px;
+  margin-bottom: 2rem;
 }
 .slide__number {
-  font-size: var(--fs-text-xxl);
+  font-size: var(--fs-text-xl);
 }
 .arrow__number {
   position: absolute;
   top: 40px;
   width: 100%;
-  height: 40px;
+  height: 24px;
 }
 .arrow__number img {
   width: 100%;
-  height: 70%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: scale-down;
 }
 
 .slide__img-container {
-  width: 100%;
-  height: 300px;
+  width: 250px;
+  height: 350px;
+  margin-bottom: 0.5rem;
 }
 .slide__img-container img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
+}
+
+.slides__container::-webkit-scrollbar {
+  width: 10px;
+}
+.slides__container {
+  scrollbar-width: thin;
+}
+.slides__container::-webkit-scrollbar-track {
+  background: var(--clr-gray);
+}
+.slides__container::-webkit-scrollbar-thumb {
+  background-color: var(--clr-dark);
+  border: 4px solid var(--clr-light);
 }
 /*----------------------------------------------
 ------------------------------------------------
     6.  gallery section
 ------------------------------------------------
 ----------------------------------------------*/
+.mail__container {
+  width: 100%;
+  height: 300px;
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.mail__bigtext {
+  font-size: var(--fs-hugetext-l);
+}
 
+.form__info {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px 0;
+}
+.form__container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__submit {
+  align-self: flex-end;
+}
+.form__submit input {
+  width: 80px;
+  padding: 5px 0;
+  border: 1px solid var(--clr-dark);
+}
+.form__input {
+  display: flex;
+  margin-bottom: 16px;
+}
+.form__input .input__label {
+  width: 100px;
+}
+.form__input .input__ans {
+  width: 200px;
+  height: 32px;
+}
+.form__input .input__textarea {
+  width: 200px;
+  height: 64px;
+}
+
+.mail__info {
+  width: 100%;
+  height: 180px;
+  padding-right: 20px;
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.mail__info .mail__item {
+  margin: 4px 0;
+}
 /*----------------------------------------------
 ------------------------------------------------
     7.  contact section

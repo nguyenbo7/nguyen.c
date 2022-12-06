@@ -58,3 +58,6 @@ function removeOpen(index1) {
     })
 }
 
+
+
+
