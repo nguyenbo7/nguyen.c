@@ -98,6 +98,7 @@ img {
   height: auto;
 }
 main {
+  margin-top: 40px;
   width: 100%;
 
   display: flex;
@@ -116,8 +117,8 @@ main {
 ----------------------------------------------*/
 .section__container {
   width: 340px;
-  height: calc(100vh - 20px - 80px);
-  margin: 20px 0 80px 0;
+  height: minmax(560px, calc(100vh - 40px - 80px));
+  margin-bottom: 100px;
   /* background-color: bisque; */
 }
 i {
@@ -168,10 +169,6 @@ i {
 .tab_space-mid {
   width: 104px;
   margin: 2px 20px 2px 0px;
-}
-.tab_space {
-  width: 104px;
-  margin: 2px 20px 2px 20px;
 }
 /*----------------------------------------------
 ------------------------------------------------
@@ -225,8 +222,8 @@ i {
 .nav__menu {
   position: fixed;
   z-index: var(--z-high);
-  top: 20px;
-  bottom: 80px;
+  top: 0;
+  bottom: 58px;
   transform: translateY(-150%);
 
   width: 340px;
@@ -378,26 +375,6 @@ i {
 }
 .slide__item .label__header {
   width: 250px;
-}
-
-.slide__header {
-  position: relative;
-  width: 100px;
-  margin-bottom: 2rem;
-}
-.slide__number {
-  font-size: var(--fs-text-xl);
-}
-.arrow__number {
-  position: absolute;
-  top: 40px;
-  width: 100%;
-  height: 24px;
-}
-.arrow__number img {
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;
 }
 
 .slide__img-container {
