@@ -368,22 +368,12 @@ i {
 *   studio slides
 *   --------------------
 */
-
-.slides__container {
-  font-family: sans-serif;
-  scroll-snap-type: x mandatory;
-  display: flex;
-
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
 .slide__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  min-width: 90%;
-  scroll-snap-align: start;
+  width: 250px;
   position: relative;
 }
 .slide__item .label__header {
@@ -419,20 +409,6 @@ i {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.slides__container::-webkit-scrollbar {
-  width: 10px;
-}
-.slides__container {
-  scrollbar-width: thin;
-}
-.slides__container::-webkit-scrollbar-track {
-  background: var(--clr-gray);
-}
-.slides__container::-webkit-scrollbar-thumb {
-  background-color: var(--clr-dark);
-  border: 4px solid var(--clr-light);
 }
 /*----------------------------------------------
 ------------------------------------------------
@@ -515,75 +491,3 @@ i {
     8.  responsive styles
 ------------------------------------------------
 ----------------------------------------------*/
-/* @media screen and (min-width: 880px) {
-  .home__section {
-    width: 100%;
-    display: grid;
-    grid-template-areas:
-      "about experience"
-      "connect position";
-    margin: 40px;
-    gap: 40px 0;
-  }
-  .home__about {
-    grid-area: about;
-  }
-  .home__experience {
-    grid-area: experience;
-    justify-self: flex-end;
-  }
-  .home__position {
-    grid-area: position;
-    justify-self: flex-end;
-  }
-  .home__connect {
-    grid-area: connect;
-  }
-  .info__body {
-    height: 350px;
-  }
-  .icon__info {
-    display: none;
-  }
-} */
-
-/* @media screen and (min-width: 1150px) {
-  .home__section {
-    grid-template-areas:
-      "about    hugeimg     experience"
-      "connect  hugeimg     position";
-  }
-  .home__hugeimg-container {
-    grid-area: hugeimg;
-    display: block;
-    height: 820px;
-    width: 80%;
-    justify-self: center;
-
-    padding: 2px;
-    background-color: var(--clr-dark);
-    transition: transform 0.45s;
-
-    display: flex;
-    justify-content: center;
-  }
-  .home__hugeimg-container img {
-    height: 100%;
-    object-fit: cover;
-  }
-} */
-
-/* @media screen and (min-width: 1250px) {
-  .home__section {
-    margin: 40px 60px;
-  }
-  .home__hugeimg-container {
-    width: 360px;
-  }
-} */
-
-/* @media screen and (min-width: 1450px) {
-  .home__section {
-    margin: 40px 100px;
-  }
-} */
