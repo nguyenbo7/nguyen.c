@@ -494,10 +494,10 @@ i {
     justify-content: flex-start;
   }
   .nav__link {
-    margin: 0 10px;
+    margin: 0 12px;
   }
   .nav__link-none {
-    display: block;
+    /* display: block; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -669,6 +669,38 @@ i {
   }
   .mail__info .mail__item {
     margin: 0px 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section__container {
+    width: 1200px;
+  }
+  .nav__bar {
+    width: 340px;
+    height: 48px;
+    justify-content: center;
+  }
+  .nav__link {
+    margin: 0 10px;
+  }
+  .home__section {
+    grid-template-areas:
+      "about    hugeimg     experience"
+      "connect  hugeimg     position";
+  }
+  .home__hugeimg-container {
+    grid-area: hugeimg;
+    display: block;
+    width: 340px;
+    height: 100%;
+    padding: 2px;
+    background-color: var(--clr-dark);
+    justify-self: center;
+  }
+  .home__hugeimg-container img {
+    height: 100%;
+    object-fit: cover;
   }
 }
 
