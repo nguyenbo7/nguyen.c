@@ -34,7 +34,7 @@ style guide
 :root {
   /* colors */
   --clr-dark: #000000;
-  --clr-light: #ffffff;
+  --clr-light: #fff;
   --clr-gray: #d1d1d1;
   --clr-theme: #001aff;
 
@@ -423,7 +423,8 @@ i {
 }
 .form__submit input {
   width: 80px;
-  padding: 5px 0;
+  padding: 8px 0;
+  background-color: var(--clr-light);
   border: 1px solid var(--clr-dark);
 }
 .form__input {
@@ -437,7 +438,7 @@ i {
   width: 200px;
   height: 32px;
 }
-.form__input .input__textarea {
+.form__input .input__ans-big {
   width: 200px;
   height: 64px;
 }
@@ -602,6 +603,72 @@ i {
   }
   .slide__info .label__body-text {
     margin-top: -1.25rem;
+  }
+
+  .contact__section {
+    /* margin-bottom: 80px; */
+    /* height: 600px; */
+    display: grid;
+    grid-template-areas:
+      "mail form"
+      "footer form";
+    /* background-color: papayawhip; */
+  }
+
+  .mail__container {
+    grid-area: mail;
+    height: 400px;
+    /* align-self: center; */
+    flex-direction: column;
+  }
+  .mail__bigtext {
+    font-size: 7rem;
+  }
+
+  .form__info {
+    grid-area: form;
+    height: 500px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1.5px solid var(--clr-dark);
+    /* background-color: pink; */
+  }
+  .form__input {
+    flex-direction: column;
+  }
+  .form__input input {
+    border: none;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    padding-left: 16px;
+  }
+  .form__input .input__label {
+    margin-bottom: 2px;
+  }
+  .form__input .input__ans {
+    width: 300px;
+    height: 40px;
+  }
+  .form__input .input__ans-big {
+    width: 300px;
+    height: 128px;
+  }
+  .form__submit {
+    margin-top: 4px;
+  }
+
+  .mail__info {
+    grid-area: footer;
+    height: 100px;
+    margin: 0;
+    padding-right: 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .mail__info .mail__item {
+    margin: 0px 0px;
   }
 }
 
