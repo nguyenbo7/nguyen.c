@@ -23,8 +23,7 @@ style guide
 *************************************************
 ************************************************/
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*----------------------------------------------
 ------------------------------------------------
@@ -36,11 +35,10 @@ style guide
   --clr-dark: #000000;
   --clr-light: #fff;
   --clr-gray: #d1d1d1;
-  --clr-theme: #001aff;
+  --clr-theme: #be3455;
 
   /* font-family */
   --font-main: "Poppins", sans-serif;
-  --font-barcode: "Libre Barcode 128 Text", cursive;
 
   /* font-size */
   --fs-text-xs: 0.625rem;
@@ -54,14 +52,24 @@ style guide
   --fs-hugetext-m: 3.062rem;
   --fs-hugetext-l: 3.812rem;
 
+  /* font-weight */
+  --fw-thin: 400;
+  --fw-semi: 500;
+  --fw-bold: 600;
+
   /* z index */
   --z-low: -10;
   --z-high: 10;
+  --z-highest: 20;
 
   /* margin bottom */
   --mb-text: 1rem;
   --mb-container: 2rem;
   --mb-section: 4rem;
+
+  /* container width */
+  --width-xs: 300px;
+  --width-s: 340px;
 }
 /*----------------------------------------------
 ------------------------------------------------
@@ -78,14 +86,12 @@ html {
 }
 body {
   font-size: var(--fs-text-s);
-  font-weight: 400;
+  font-weight: var(--fw-thin);
   font-family: var(--font-main);
-
   color: var(--clr-dark);
   background-color: var(--clr-light);
-
-  letter-spacing: 1px;
   line-height: 1.875;
+  letter-spacing: 0.875px;
 }
 ul {
   list-style: none;
@@ -98,16 +104,10 @@ img {
   height: auto;
 }
 main {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   width: 100%;
-
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.flex__center-all {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 /*----------------------------------------------
@@ -115,20 +115,30 @@ main {
     2.  components
 ------------------------------------------------
 ----------------------------------------------*/
+.flex__center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .section__container {
   width: 340px;
-  height: minmax(560px, calc(100vh - 40px - 80px));
-  margin-bottom: 20rem;
-  /* background-color: bisque; */
+  /*120px = 80px nav bar + 40 margin top & bottom*/
+  height: minmax(700px, calc(100vh - 120px));
+  margin: 20px 0;
 }
 i {
   font-size: 24px;
 }
+
+/**
+*   label name
+*   --------------------
+*/
 .label__header {
   width: 100%;
   height: 32px;
-  margin-bottom: 12px;
-  border-top: 2px solid var(--clr-dark);
+  margin-bottom: 8px;
+  border-top: 1.5px solid var(--clr-dark);
 }
 .label__header-text {
   width: 100px;
@@ -147,8 +157,12 @@ i {
   font-size: var(--fs-text-xl);
 }
 
+/**
+*   list square items
+*   --------------------
+*/
 .list__item {
-  padding: 0px 8px 14px 8px;
+  padding: 0px 8px 16px 8px;
 }
 .list__header {
   display: flex;
@@ -173,21 +187,20 @@ i {
 /*----------------------------------------------
 ------------------------------------------------
     3.  navigation bar
+        *   width 340px,  height 60px
 ------------------------------------------------
 ----------------------------------------------*/
 .nav__bar {
   position: fixed;
   z-index: var(--z-high);
   bottom: 0;
-  padding-bottom: 20px;
 
-  width: 340px;
-  height: 58px;
+  width: var(--width-s);
+  height: 60px;
   border-top: 2px solid var(--clr-dark);
   background-color: var(--clr-light);
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -196,9 +209,13 @@ i {
 *   --------------------
 */
 .nav__link {
-  height: 100%;
+  height: 32px;
   width: 100px;
   background-color: var(--clr-dark);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .nav__name {
   color: var(--clr-light);
@@ -213,6 +230,11 @@ i {
 */
 .nav__toggle {
   cursor: pointer;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .icon__nav-close {
   display: none;
@@ -221,12 +243,12 @@ i {
   position: fixed;
   z-index: var(--z-high);
   top: 0;
-  bottom: 58px;
+  bottom: 60px;
   transform: translateY(-150%);
 
   width: 340px;
-  padding: 4px;
-  background-color: var(--clr-dark);
+  padding: 20px 0;
+  background-color: var(--clr-light);
   transition: transform 0.45s;
 }
 .nav__menu-show {
@@ -234,26 +256,35 @@ i {
 }
 .nav__menu-img {
   height: 100%;
+  padding: 4px;
+  background-color: var(--clr-dark);
   display: flex;
-  justify-content: center;
 }
 .nav-menu-img img {
   height: 100%;
   object-fit: cover;
 }
+
+/*  nav link inside nav menu*/
 .nav__menu-container {
   position: absolute;
-  z-index: 100;
-  bottom: 220px;
-  padding-left: 24px;
+  z-index: var(--z-highest);
+  bottom: 240px;
+  padding-left: 32px;
 }
 .nav__menu-link {
-  margin-top: 24px;
+  height: 72px;
+  width: 140px;
 }
 .nav__menu-name {
   font-size: var(--fs-text-xl);
-  font-weight: 600;
+  font-weight: var(--fw-bold);
   color: var(--clr-dark);
+  transition: 0.32s;
+}
+.nav__menu-name:hover {
+  color: var(--clr-theme);
+  font-size: var(--fs-text-xxl);
 }
 /*----------------------------------------------
 ------------------------------------------------
