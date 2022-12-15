@@ -116,17 +116,12 @@ main {
     2.  components
 ------------------------------------------------
 ----------------------------------------------*/
-.flex__center-all {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /*120px = 80px nav bar + 40 margin top & bottom*/
-/* .section__container {
+.section__container {
   width: 340px;
   height: minmax(700px, calc(100vh - 120px));
   margin: 20px 0;
-} */
+}
 i {
   font-size: 24px;
 }
@@ -385,11 +380,6 @@ i {
     5.  studio section
 ------------------------------------------------
 ----------------------------------------------*/
-.section__container {
-  width: 340px;
-  height: minmax(800px, calc(100vh - 120px));
-  margin: 20px 0;
-}
 .studio__section {
   height: 800px;
 }
@@ -450,22 +440,39 @@ i {
     6.  gallery section
 ------------------------------------------------
 ----------------------------------------------*/
+.contact__section {
+  height: 800px;
+}
+/**
+*   mail big text
+*   --------------------
+*/
 .mail__container {
   width: 100%;
-  height: 300px;
+  height: 256px;
   color: var(--clr-light);
   background-color: var(--clr-dark);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mail__bigtext {
   font-size: var(--fs-hugetext-l);
 }
-
+/**
+*   form contact
+*   --------------------
+*/
 .form__info {
   width: 100%;
-  margin: 20px 0;
-  padding: 10px 0;
+  height: 22rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .form__container {
   width: 300px;
@@ -473,36 +480,46 @@ i {
   flex-direction: column;
   align-items: center;
 }
-
-.form__submit {
-  align-self: flex-end;
-}
-.form__submit input {
-  width: 80px;
-  padding: 8px 0;
-  background-color: var(--clr-light);
-  border: 1px solid var(--clr-dark);
-}
-.form__input {
+.form__container .form__input {
   display: flex;
   margin-bottom: 16px;
 }
-.form__input .input__label {
+.form__container .form__input .input__label {
   width: 100px;
+  font-weight: var(--fw-bold);
 }
-.form__input .input__ans {
+.form__container .form__input .input__ans {
   width: 200px;
   height: 32px;
 }
-.form__input .input__ans-big {
+.form__container .form__input .input__ans-big {
   width: 200px;
   height: 64px;
 }
-
+.form__container .form__submit {
+  align-self: flex-end;
+}
+.form__container .form__submit input {
+  width: 80px;
+  padding: 8px 0;
+  background-color: var(--clr-theme);
+  border: 1px solid var(--clr-dark);
+  font-weight: var(--fw-bold);
+  transition: 0.45s;
+  cursor: pointer;
+}
+.form__container .form__submit input:hover {
+  background-color: var(--clr-light);
+}
+/**
+*   form contact
+*   --------------------
+*/
 .mail__info {
   width: 100%;
-  height: 180px;
-  padding-right: 20px;
+  height: 128px;
+  padding-right: 24px;
+
   color: var(--clr-light);
   background-color: var(--clr-dark);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
@@ -514,7 +531,7 @@ i {
   justify-content: center;
 }
 .mail__info .mail__item {
-  margin: 4px 0;
+  margin: 2px 0;
 }
 /*----------------------------------------------
 ------------------------------------------------
