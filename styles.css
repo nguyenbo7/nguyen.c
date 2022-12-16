@@ -120,6 +120,7 @@ main {
   width: 340px;
   height: minmax(700px, calc(100vh - 120px));
   margin-bottom: 7rem;
+  padding-top: 40px;
 }
 i {
   font-size: 24px;
@@ -287,7 +288,6 @@ i {
 ----------------------------------------------*/
 .home__section {
   height: 800px;
-  padding-top: 40px;
 }
 .home__info {
   width: 340px;
@@ -441,7 +441,6 @@ i {
 ----------------------------------------------*/
 .contact__section {
   height: 800px;
-  margin-bottom: 4rem;
 }
 /**
 *   mail big text
@@ -547,12 +546,11 @@ i {
 @media screen and (min-width: 880px) {
   .section__container {
     width: 800px;
-    margin-bottom: 10rem;
-    /* background-color: bisque; */
+    margin-bottom: 15rem;
   }
 
   /**
-    *   nav bar
+    *   nav bar (880px)
     *   --------------------
     */
   .nav__bar {
@@ -577,7 +575,7 @@ i {
     display: none;
   }
   /**
-    *   home section
+    *   home section (880px)
     *   --------------------
     */
   .home__section {
@@ -609,7 +607,7 @@ i {
     display: none;
   }
   /**
-    *   studio section
+    *   studio section (880px)
     *   --------------------
     */
   .studio__about {
@@ -651,7 +649,7 @@ i {
     margin-top: -1.25rem;
   }
   /**
-    *   mail section
+    *   mail section (880px)
     *   --------------------
     */
   .contact__section {
@@ -714,7 +712,7 @@ i {
 @media screen and (min-width: 1280px) {
   .section__container {
     width: 1200px;
-    /* background-color: cadetblue; */
+    margin-bottom: 10rem;
   }
   .nav__bar {
     width: 340px;
@@ -724,66 +722,63 @@ i {
   .nav__link {
     margin: 0 10px;
   }
+  /**
+    *   home section (1280)
+    *   --------------------
+    */
   .home__section {
     grid-template-areas:
       "about    hugeimg     experience"
       "connect  hugeimg     position";
+    gap: 50px;
   }
   .home__hugeimg-container {
     grid-area: hugeimg;
     display: block;
     width: 340px;
     height: 100%;
-    padding: 2px;
-    background-color: var(--clr-dark);
+    padding: 4px;
     justify-self: center;
+    background-color: var(--clr-dark);
   }
   .home__hugeimg-container img {
     height: 100%;
     object-fit: cover;
   }
-
+  /**
+    *   studio section (1280)
+    *   --------------------
+    */
   .studio__section {
     display: flex;
-    /* align-items: flex-start; */
     justify-content: center;
-    /* background-color: palevioletred; */
+    align-items: flex-start;
+    padding-top: 128px;
   }
   .studio__about {
-    margin-bottom: 0;
-    width: 340px;
-    height: 300px;
+    height: 320px;
     margin-right: 90px;
+    margin-bottom: 0;
+    padding-left: 16px;
+    border-left: 1.5px solid var(--clr-dark);
+    border-top: 16px solid var(--clr-theme);
   }
   .studio__about-header {
     height: 160px;
   }
-  .studio__about-header .label__body-bigText,
-  .studio__about-header .label__body-text {
-    margin-left: 0px;
-  }
-
   .studio__about-body {
-    margin-top: 0;
-    height: 120px;
     width: 340px;
+    height: 112px;
+    margin-top: 0;
   }
-  .studio__about-body .lists__container {
-    flex-direction: column;
-  }
-
   .slides__container {
-    height: 700px;
+    height: 608px;
   }
   .slide__item {
-    height: 100%;
-    margin-right: 40px;
-    justify-content: flex-start;
+    margin-right: 8px;
+    width: 608px;
   }
-  .slide__item .label__header {
-    width: 340px;
-  }
-  .slide__img-container {
+  .slide__item .slide__img-container {
     height: 500px;
   }
   .slide__img-container img {
@@ -791,12 +786,9 @@ i {
     height: 500px;
     padding-bottom: 50px;
   }
-  .slide__info {
-    width: 340px;
-  }
-  /* .slide__item .slide__img-container .slide__img-info {
+  .slide__item .slide__img-container .slide__img-info {
     display: block;
-    margin: 2rem;
+    margin: 3rem;
   }
   .slide__img-info .list__title {
     width: 128px;
@@ -814,43 +806,58 @@ i {
   }
   .slide__view:hover .icon__slide-view {
     margin-left: 8px;
-  } */
-}
-
-/* @media screen and (min-width: 1150px) {
-  .home__section {
+  }
+  .slide__item .slide__info {
+    width: 340px;
+  }
+  /**
+    *   mail section (1280px)
+    *   --------------------
+    */
+  .contact__section {
+    display: grid;
     grid-template-areas:
-      "about    hugeimg     experience"
-      "connect  hugeimg     position";
+      "mail form"
+      "footer footer";
+    height: 720px;
+    margin-bottom: 12rem;
   }
-  .home__hugeimg-container {
-    grid-area: hugeimg;
-    display: block;
-    height: 820px;
-    width: 80%;s
-    justify-self: center;
-    padding: 2px;
-    background-color: var(--clr-dark);
-    transition: transform 0.45s;
-    display: flex;
-    justify-content: center;
+  .mail__container {
+    grid-area: mail;
+    width: 100%;
+    height: 600px;
+    flex-direction: row;
   }
-  .home__hugeimg-container img {
-    height: 100%;
-    object-fit: cover;
+  .form__info {
+    grid-area: form;
+    width: 100%;
+    height: 600px;
   }
-} */
-
-/* @media screen and (min-width: 1250px) {
-  .home__section {
-    margin: 40px 60px;
+  .form__container {
+    width: 432px;
   }
-  .home__hugeimg-container {
-    width: 360px;
+  .form__container .form__input {
+    margin-bottom: 32px;
+    flex-direction: row;
+  }
+  .form__container .form__input .input__ans {
+    width: 320px;
+    height: 48px;
+  }
+  .form__container .form__input .input__ans-big {
+    width: 320px;
+    height: 144px;
+  }
+  .form__container .form__submit {
+    margin: 0 8px 0 0;
+  }
+  .mail__info {
+    grid-area: footer;
+    height: 100px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .mail__info .mail__item {
+    margin: 0px 48px;
   }
 }
-@media screen and (min-width: 1450px) {
-  .home__section {
-    margin: 40px 100px;
-  }
-} */
